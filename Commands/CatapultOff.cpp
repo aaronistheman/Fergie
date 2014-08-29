@@ -21,7 +21,8 @@ void CatapultOff::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void CatapultOff::Execute() {
-	
+	Robot::catapult->talon7->Set(0.0);
+	Robot::catapult->talon8->Set(0.0);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CatapultOff::IsFinished() {

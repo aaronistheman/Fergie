@@ -22,13 +22,13 @@ void ShifterShift::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ShifterShift::Execute() {
 	if(Robot::shifter->shifterDoubleSolenoid->Get() == DoubleSolenoid::kForward) 
-		{
-			Robot::shifter->shifterDoubleSolenoid->Set(DoubleSolenoid::kReverse);
-		}
-		else
-		{
-			Robot::shifter->shifterDoubleSolenoid->Set(DoubleSolenoid::kForward);
-		}
+	{
+		Robot::shifter->shifterDoubleSolenoid->Set(DoubleSolenoid::kReverse);
+	}
+	else
+	{
+		Robot::shifter->shifterDoubleSolenoid->Set(DoubleSolenoid::kForward);
+	}
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShifterShift::IsFinished() {

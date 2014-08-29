@@ -12,3 +12,5 @@
 /PressurizerCompress.o
 /ShifterShift.d
 /ShifterShift.o
+*.o
+*.d

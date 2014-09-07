@@ -67,7 +67,7 @@ void RobotMap::init() {
 	intakeIntakeDoubleSolenoid = new DoubleSolenoid(1, 1, 5);      
 	
 	
-	pressurizerCompressor = new Compressor(1, 1, 1, 1);
+	pressurizerCompressor = new Compressor(1, 14, 1, 1);
 	
 	
 	shifterShifterDoubleSolenoid = new DoubleSolenoid(1, 2, 6);      

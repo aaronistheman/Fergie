@@ -7,7 +7,11 @@
 /*       -fdollars-in-identifiers flag.                   */
 
 
+void _GLOBAL__I__ZN19CatapultForwardSlowC2Ev();
+
 void _GLOBAL__I__ZN11CatapultOffC2Ev();
+
+void _GLOBAL__I__ZN19CatapultReverseSlowC2Ev();
 
 void _GLOBAL__I__ZN16ChassisTankDriveC2Ev();
 
@@ -90,7 +94,9 @@ void _GLOBAL__I__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_ctors[])();
 void (*_ctors[])() =
     {
+    _GLOBAL__I__ZN19CatapultForwardSlowC2Ev,
     _GLOBAL__I__ZN11CatapultOffC2Ev,
+    _GLOBAL__I__ZN19CatapultReverseSlowC2Ev,
     _GLOBAL__I__ZN16ChassisTankDriveC2Ev,
     _GLOBAL__I__ZN9IntakeOffC2Ev,
     _GLOBAL__I__ZN8IntakeOnC2Ev,
@@ -133,7 +139,11 @@ void (*_ctors[])() =
     0
     };
 
+void _GLOBAL__D__ZN19CatapultForwardSlowC2Ev();
+
 void _GLOBAL__D__ZN11CatapultOffC2Ev();
+
+void _GLOBAL__D__ZN19CatapultReverseSlowC2Ev();
 
 void _GLOBAL__D__ZN16ChassisTankDriveC2Ev();
 
@@ -206,7 +216,9 @@ void _GLOBAL__D__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_dtors[])();
 void (*_dtors[])() =
     {
+    _GLOBAL__D__ZN19CatapultForwardSlowC2Ev,
     _GLOBAL__D__ZN11CatapultOffC2Ev,
+    _GLOBAL__D__ZN19CatapultReverseSlowC2Ev,
     _GLOBAL__D__ZN16ChassisTankDriveC2Ev,
     _GLOBAL__D__ZN9IntakeOffC2Ev,
     _GLOBAL__D__ZN8IntakeOnC2Ev,

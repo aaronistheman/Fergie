@@ -463,7 +463,7 @@ Children:
           default: whileHeld
           name: When to Run
           validators: null
-          value: whenReleased
+          value: whileHeld
     Properties:
       Number: !!robotbuilder.data.properties.ChoicesProperty
         choices: *id017

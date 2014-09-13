@@ -22,6 +22,7 @@ void IntakeReverse::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void IntakeReverse::Execute() {
 	Robot::intake->talon9->Set(-1.0);
+	Robot::intake->lights->Set(Relay::kReverse);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool IntakeReverse::IsFinished() {

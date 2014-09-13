@@ -21,16 +21,8 @@ void CatapultForwardSlow::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void CatapultForwardSlow::Execute() {
-	if (Robot::catapult->catapultDoubleSolenoidA->Get() == DoubleSolenoid::kForward)
-	{
-		Robot::catapult->catapultDoubleSolenoidA->Set(DoubleSolenoid::kReverse);
-		Robot::catapult->catapultDoubleSolenoidB->Set(DoubleSolenoid::kReverse);
-	}
-	else
-	{
-		Robot::catapult->catapultDoubleSolenoidA->Set(DoubleSolenoid::kForward);
-		Robot::catapult->catapultDoubleSolenoidB->Set(DoubleSolenoid::kForward);
-	}
+	Robot::catapult->talon7->Set(0.2);
+	Robot::catapult->talon8->Set(0.2);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CatapultForwardSlow::IsFinished() {

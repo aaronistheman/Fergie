@@ -26,7 +26,7 @@ void IntakeReverse::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void IntakeReverse::Execute() {
-	Robot::intake->talon9->Set(-0.5);
+	Robot::intake->talon9->Set(-1.0);
 }
 
 // Make this return true when this Command no longer needs to run execute()

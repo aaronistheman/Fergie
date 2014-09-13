@@ -21,8 +21,8 @@ void CatapultReverseSlow::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void CatapultReverseSlow::Execute() {
-	Robot::catapult->talon7->Set(-0.2);
-	Robot::catapult->talon8->Set(-0.2);
+	Robot::catapult->talon7->Set(-0.6);
+	Robot::catapult->talon8->Set(-0.6);
 	
 }
 // Make this return true when this Command no longer needs to run execute()

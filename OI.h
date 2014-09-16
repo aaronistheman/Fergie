@@ -21,6 +21,7 @@ private:
 	JoystickButton* cButtonA;
 	JoystickButton* cRBumper;
 	Joystick* driver;
+	JoystickButton* dRightBumper;
 	JoystickButton* dButtonB;
 	JoystickButton* dButtonA;
 	JoystickButton* dLeftStick;

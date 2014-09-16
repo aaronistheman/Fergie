@@ -19,6 +19,8 @@ SpeedController* RobotMap::chassisTalon3 = NULL;
 SpeedController* RobotMap::chassisTalon4 = NULL;
 SpeedController* RobotMap::chassisTalon5 = NULL;
 SpeedController* RobotMap::chassisTalon6 = NULL;
+Encoder* RobotMap::chassisEncoder1 = NULL;
+Encoder* RobotMap::chassisEncoder2 = NULL;
 SpeedController* RobotMap::intakeTalon9 = NULL;
 DoubleSolenoid* RobotMap::intakeIntakeDoubleSolenoid = NULL;
 Relay* RobotMap::intakeLights = NULL;
@@ -59,6 +61,16 @@ void RobotMap::init() {
 	chassisTalon6 = new Talon(1, 6);
 	lw->AddActuator("Chassis", "Talon6", (Talon*) chassisTalon6);
 	
+	chassisEncoder1 = new Encoder(1, 1, 1, 2, false, Encoder::k4X);
+	lw->AddSensor("Chassis", "Encoder 1", chassisEncoder1);
+	chassisEncoder1->SetDistancePerPulse(1.0);
+        chassisEncoder1->SetPIDSourceParameter(Encoder::kRate);
+        chassisEncoder1->Start();
+	chassisEncoder2 = new Encoder(1, 3, 1, 4, false, Encoder::k4X);
+	lw->AddSensor("Chassis", "Encoder 2", chassisEncoder2);
+	chassisEncoder2->SetDistancePerPulse(1.0);
+        chassisEncoder2->SetPIDSourceParameter(Encoder::kRate);
+        chassisEncoder2->Start();
 	intakeTalon9 = new Talon(1, 9);
 	lw->AddActuator("Intake", "Talon9", (Talon*) intakeTalon9);
 	

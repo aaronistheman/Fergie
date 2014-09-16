@@ -29,6 +29,8 @@ public:
 	static SpeedController* chassisTalon4;
 	static SpeedController* chassisTalon5;
 	static SpeedController* chassisTalon6;
+	static Encoder* chassisEncoder1;
+	static Encoder* chassisEncoder2;
 	static SpeedController* intakeTalon9;
 	static DoubleSolenoid* intakeIntakeDoubleSolenoid;
 	static Relay* intakeLights;

@@ -8,6 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "ChassisTankDrive.h"
+#include "SmartDashboard/SmartDashboard.h"
 ChassisTankDrive::ChassisTankDrive() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -25,6 +26,9 @@ void ChassisTankDrive::Execute() {
 	const int rightY = 5;
 	Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(), leftY,
 					  	  	  	  	  	  Robot::oi->getDriver(), rightY);
+	SmartDashboard::PutNumber("PreferenceTest", 
+			Robot::robotPref->GetDouble("PreferenceTestValue", 0));
+	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ChassisTankDrive::IsFinished() {

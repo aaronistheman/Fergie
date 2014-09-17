@@ -8,6 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "CatapultOff.h"
+#include "SmartDashboard/SmartDashboard.h"
 CatapultOff::CatapultOff() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -23,6 +24,7 @@ void CatapultOff::Initialize() {
 void CatapultOff::Execute() {
 	Robot::catapult->talon7->Set(0.0);
 	Robot::catapult->talon8->Set(0.0);
+	SmartDashboard::PutNumber("LimitSwitch", Robot::catapult->limitSwitch->Get());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CatapultOff::IsFinished() {

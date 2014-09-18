@@ -17,7 +17,20 @@ ChassisTankDrive::ChassisTankDrive() {
 }
 // Called just before this Command runs the first time
 void ChassisTankDrive::Initialize() {
-	
+	if(Robot::chassis->mReversed)
+		{
+			Robot::chassis->robotDrive
+							->SetInvertedMotor(RobotDrive::kRearLeftMotor, false);
+			Robot::chassis->robotDrive
+							->SetInvertedMotor(RobotDrive::kRearRightMotor, false);
+		}
+		else
+		{
+			Robot::chassis->robotDrive
+							->SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
+			Robot::chassis->robotDrive
+							->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
+		}
 }
 // Called repeatedly when this Command is scheduled to run
 void ChassisTankDrive::Execute() {

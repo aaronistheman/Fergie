@@ -84,7 +84,7 @@ Children:
           value: '2'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: CatapultOff}
+        name: Default Command, type: Command, validators: null, value: CatapultShoot}
   - Name: Chassis
     Base: Subsystem
     Children:
@@ -535,7 +535,7 @@ Children:
           default: whileHeld
           name: When to Run
           validators: null
-          value: whenReleased
+          value: whileHeld
     - Name: cButtonA
       Base: Joystick Button
       Children: []
@@ -593,7 +593,7 @@ Children:
           name: Command
           type: Command
           validators: *id014
-          value: IntakeToggle
+          value: CatapultPincherToggle
         Button: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id015
           default: '1'
@@ -648,6 +648,30 @@ Children:
           name: Button
           validators: null
           value: '9'
+        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
+          name: Joystick, validators: null, value: CoDriver}
+        When to Run: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id016
+          default: whileHeld
+          name: When to Run
+          validators: null
+          value: whenPressed
+    - Name: cLBumper
+      Base: Joystick Button
+      Children: []
+      Properties:
+        Command: !!robotbuilder.data.properties.TypeSelectionProperty
+          default: None
+          name: Command
+          type: Command
+          validators: *id014
+          value: IntakeToggle
+        Button: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id015
+          default: '1'
+          name: Button
+          validators: null
+          value: '5'
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
           name: Joystick, validators: null, value: CoDriver}
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
@@ -775,6 +799,14 @@ Children:
     Properties:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: Intake}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+  - Name: CatapultShoot
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Catapult}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
   Properties: {}

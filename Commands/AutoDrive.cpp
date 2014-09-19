@@ -27,15 +27,17 @@ void AutoDrive::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void AutoDrive::Execute() {
+	// Update distance driven and drive goal
 	driveDistance = Robot::chassis->encoder1->GetDistance();
-	// goalDistance = Robot::robotPref->GetDouble("GoalDistance", 0);
+	goalDistance = Robot::robotPref->GetDouble("GoalDistance", 0);
 
+	// For testing purposes
 	SmartDashboard::PutNumber("Encoder1", driveDistance);
 	
-	Robot::chassis->robotDrive->Drive(0.0, 0.0);
-	// Robot::chassis->robotDrive->Drive(
-	// 		Robot::robotPref->GetDouble("DriveSpeed" , 0), 
-	// 		Robot::robotPref->GetDouble("DriveAngle", 0));
+	// Make the robot move
+	Robot::chassis->robotDrive->Drive(
+			Robot::robotPref->GetDouble("DriveSpeed" , 0), 
+			Robot::robotPref->GetDouble("DriveAngle", 0));
 }
 // Make this return true when this Command no longer needs to run execute()
 bool AutoDrive::IsFinished() {

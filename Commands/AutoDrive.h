@@ -30,7 +30,8 @@ public:
 	virtual void End();
 	virtual void Interrupted();
 private:
-	Timer clock;
+	double driveDistance; // how far driven so far
+	double goalDistance;  // how far to drive
 };
 
 #endif

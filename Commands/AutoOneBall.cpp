@@ -11,6 +11,7 @@
 
 
 #include "AutoOneBall.h"
+#include "AutoDrive.h"
 
 AutoOneBall::AutoOneBall() {
 	// Add Commands here:
@@ -29,4 +30,8 @@ AutoOneBall::AutoOneBall() {
 	// e.g. if Command1 requires chassis, and Command2 requires arm,
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
+	
+	AddSequential(new AutoDrive());
+	// AddSequential(new PopHuggersAndIntakeOut());
+	// AddSequential(new ShootAndStuff());
 }

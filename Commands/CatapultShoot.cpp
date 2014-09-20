@@ -9,7 +9,8 @@
 // it from being updated in th future.
 #include "CatapultShoot.h"
 CatapultShoot::CatapultShoot() 
-: limitSwitchDisengaged(Robot::catapult->catapultLimitSwitch->Get())
+: limitSwitchDisengaged(Robot::robotPref->GetDouble("disengaged", 1.0))
+// : limitSwitchDisengaged(Robot::catapult->catapultLimitSwitch->Get())
 {
 	
 	// Use requires() here to declare subsystem dependencies

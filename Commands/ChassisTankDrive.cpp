@@ -18,28 +18,43 @@ ChassisTankDrive::ChassisTankDrive()
 }
 // Called just before this Command runs the first time
 void ChassisTankDrive::Initialize() {
-	/*if(Robot::chassis->mReversed)
-		{
-			Robot::chassis->robotDrive
-							->SetInvertedMotor(RobotDrive::kRearLeftMotor, false);
-			Robot::chassis->robotDrive
-							->SetInvertedMotor(RobotDrive::kRearRightMotor, false);
-		}
-		else
+	/*
+	if(Robot::chassis->mReversed)
 		{
 			Robot::chassis->robotDrive
 							->SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
 			Robot::chassis->robotDrive
 							->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 		}
-	*/
+		else
+		{
+			Robot::chassis->robotDrive
+							->SetInvertedMotor(RobotDrive::kRearLeftMotor, false);
+			Robot::chassis->robotDrive
+							->SetInvertedMotor(RobotDrive::kRearRightMotor, false);
+		}
+		*/
 }
 // Called repeatedly when this Command is scheduled to run
 void ChassisTankDrive::Execute() {
 	const int leftY = 2;
 	const int rightY = 5;
-	Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(), leftY,
-					  	  	  	  	  	  Robot::oi->getDriver(), rightY);
+		/*
+		if(Robot::chassis->mReversed)
+		{
+			Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(), rightY,
+					  	  	  	  	  	  	  	  Robot::oi->getDriver(), leftY);
+		}
+		else
+		{	
+			Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(), leftY,
+	  	  	  	  	  	  	  	  	  	  	  	  Robot::oi->getDriver(), rightY);
+		}
+		*/
+		Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(),
+				                              leftY,
+				                              Robot::oi->getDriver(),
+				                              rightY);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ChassisTankDrive::IsFinished() {

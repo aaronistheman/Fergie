@@ -13,6 +13,7 @@
 SpeedController* RobotMap::catapultTalon7 = NULL;
 SpeedController* RobotMap::catapultTalon8 = NULL;
 DoubleSolenoid* RobotMap::catapultCatapultDoubleSolenoid = NULL;
+DigitalInput* RobotMap::catapultCatapultLimitSwitch = NULL;
 SpeedController* RobotMap::chassisTalon1 = NULL;
 SpeedController* RobotMap::chassisTalon2 = NULL;
 SpeedController* RobotMap::chassisTalon3 = NULL;
@@ -40,6 +41,9 @@ void RobotMap::init() {
 	
 	catapultCatapultDoubleSolenoid = new DoubleSolenoid(1, 2, 6);      
 	
+	
+	catapultCatapultLimitSwitch = new DigitalInput(1, 5);
+	lw->AddSensor("Catapult", "CatapultLimitSwitch", catapultCatapultLimitSwitch);
 	
 	chassisTalon1 = new Talon(1, 1);
 	lw->AddActuator("Chassis", "Talon1", (Talon*) chassisTalon1);

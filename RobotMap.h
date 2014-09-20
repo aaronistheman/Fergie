@@ -23,6 +23,7 @@ public:
 	static SpeedController* catapultTalon7;
 	static SpeedController* catapultTalon8;
 	static DoubleSolenoid* catapultCatapultDoubleSolenoid;
+	static DigitalInput* catapultCatapultLimitSwitch;
 	static SpeedController* chassisTalon1;
 	static SpeedController* chassisTalon2;
 	static SpeedController* chassisTalon3;

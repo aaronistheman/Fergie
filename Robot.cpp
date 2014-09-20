@@ -45,6 +45,10 @@ void Robot::RobotInit() {
 	Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kReverse);
 	Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kForward);
 	Robot::shifter->shifterDoubleSolenoid->Set(DoubleSolenoid::kReverse);
+	// Robot::chassis->robotDrive
+	// 				->SetInvertedMotor(RobotDrive::kRearLeftMotor, false);
+	// Robot::chassis->robotDrive
+	// 				->SetInvertedMotor(RobotDrive::kRearRightMotor, false);
   }
 	
 void Robot::AutonomousInit() {

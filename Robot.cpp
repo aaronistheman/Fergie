@@ -52,6 +52,13 @@ void Robot::RobotInit() {
   }
 	
 void Robot::AutonomousInit() {
+	// instantiate the command used for the autonomous period
+	autoChooser = new SendableChooser();
+	autoChooser->AddDefault("AutoOneBall", new AutoOneBall());
+	autoChooser->AddObject("AutoDoNothing", new AutoDoNothing());
+	SmartDashboard::PutData("AutoChooser", autoChooser);
+	autonomousCommand = (Command*)(autoChooser->GetSelected());
+	
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 }

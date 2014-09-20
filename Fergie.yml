@@ -954,6 +954,12 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: Catapult}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
+  - Name: AutoDoNothing
+    Base: Command Group
+    Children: []
+    Properties:
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
   Properties: {}
 Properties:
   Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Documents

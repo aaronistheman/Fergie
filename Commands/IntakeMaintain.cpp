@@ -19,21 +19,27 @@ IntakeMaintain::IntakeMaintain():rollerValue(0.0)
 // Called just before this Command runs the first time
 void IntakeMaintain::Initialize() {
 	rollerValue = Robot::intake->talon9->Get();
+	timer.Start();
 }
 // Called repeatedly when this Command is scheduled to run
 void IntakeMaintain::Execute() {
 	Robot::intake->talon9->Set(rollerValue);
-	if (Robot::oi->getCoDriver()->GetRawAxis(3) < -0.2)
+	if (Robot::oi->getCoDriver()->GetRawAxis(3) > 0.2)
 	{
-		if (Robot::intake->intakeDoubleSolenoid->Get() == DoubleSolenoid::kReverse)
+		if (timer.HasPeriodPassed(0.5))
 		{
-			Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kForward);
-			Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kForward);
-		}
-	else
-		{
-			Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kReverse);
-			Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kReverse);
+			if (Robot::intake->intakeDoubleSolenoid->Get() == DoubleSolenoid::kReverse)
+			{
+				Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kForward);
+				Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kReverse);
+			}
+		
+			else
+			{
+				Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kReverse);
+				Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kForward);
+			}
+			timer.Reset();
 		}
 	}
 }

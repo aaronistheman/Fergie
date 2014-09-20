@@ -31,6 +31,7 @@ public:
 	virtual void Interrupted();
 private:
 	double rollerValue;
+	Timer timer; 
 };
 
 #endif

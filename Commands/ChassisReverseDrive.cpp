@@ -25,7 +25,7 @@ void ChassisReverseDrive::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ChassisReverseDrive::IsFinished() {
-	return false;
+	return true;
 }
 // Called once after isFinished returns true
 void ChassisReverseDrive::End() {

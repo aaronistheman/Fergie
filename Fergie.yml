@@ -422,7 +422,7 @@ Children:
   - Name: Driver
     Base: Joystick
     Children:
-    - Name: dLeftStick
+    - Name: dRightStick
       Base: Joystick Button
       Children: []
       Properties:
@@ -434,7 +434,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '9'
+          value: '10'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -634,7 +634,7 @@ Children:
           name: Command
           type: Command
           validators: *id014
-          value: HuggerToggle
+          value: IntakeToggle
         Button: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id015
           default: '1'
@@ -682,7 +682,7 @@ Children:
           name: Command
           type: Command
           validators: *id014
-          value: IntakeToggle
+          value: HuggerToggle
         Button: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id015
           default: '1'

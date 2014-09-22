@@ -9,8 +9,6 @@
 // it from being updated in th future.
 #include "CatapultShoot.h"
 CatapultShoot::CatapultShoot() 
-// : limitSwitchDisengaged(Robot::robotPref->GetDouble("disengaged", 1.0))
-: limitSwitchDisengaged(Robot::catapult->catapultLimitSwitch->Get())
 {
 	
 	// Use requires() here to declare subsystem dependencies
@@ -34,7 +32,9 @@ void CatapultShoot::Execute() {
 	}
 	else
 	{
-		if (Robot::catapult->catapultLimitSwitch->Get() == limitSwitchDisengaged)
+		// Limit switch is disengaged; move the catapult until
+		// the switch is engaged
+		if (Robot::catapult->catapultLimitSwitch->Get() == 1.0)
 		{
 			Robot::catapult->talon7->Set(1.0);
 			Robot::catapult->talon8->Set(1.0);
@@ -46,8 +46,8 @@ void CatapultShoot::Execute() {
 		}
 	}
 	
-	// SmartDashboard::PutNumber("LimitSwitch", 
-	// 		Robot::catapult->catapultLimitSwitch->Get());
+	SmartDashboard::PutNumber("LimitSwitch", 
+		Robot::catapult->catapultLimitSwitch->Get());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CatapultShoot::IsFinished() {

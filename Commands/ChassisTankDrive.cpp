@@ -18,7 +18,6 @@ ChassisTankDrive::ChassisTankDrive()
 }
 // Called just before this Command runs the first time
 void ChassisTankDrive::Initialize() {
-	/*
 	if(Robot::chassis->mReversed)
 		{
 			Robot::chassis->robotDrive
@@ -33,13 +32,12 @@ void ChassisTankDrive::Initialize() {
 			Robot::chassis->robotDrive
 							->SetInvertedMotor(RobotDrive::kRearRightMotor, false);
 		}
-		*/
 }
 // Called repeatedly when this Command is scheduled to run
 void ChassisTankDrive::Execute() {
 	const int leftY = 2;
 	const int rightY = 5;
-		/*
+		
 		if(Robot::chassis->mReversed)
 		{
 			Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(), rightY,
@@ -48,13 +46,8 @@ void ChassisTankDrive::Execute() {
 		else
 		{	
 			Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(), leftY,
-	  	  	  	  	  	  	  	  	  	  	  	  Robot::oi->getDriver(), rightY);
+	    	  	  	  	  	  	  	  	  	  	  Robot::oi->getDriver(), rightY);
 		}
-		*/
-		Robot::chassis->robotDrive->TankDrive(Robot::oi->getDriver(),
-				                              leftY,
-				                              Robot::oi->getDriver(),
-				                              rightY);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ChassisTankDrive::IsFinished() {

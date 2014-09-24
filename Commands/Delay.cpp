@@ -1,6 +1,9 @@
 #include "Delay.h"
 
-Delay::Delay(int delayTime)
+// For testing purposes:
+#include "SmartDashboard/SmartDashboard.h"
+
+Delay::Delay(double delayTime)
 : mDelayTime(delayTime)
 , mTimer()
 {
@@ -14,6 +17,9 @@ void Delay::Initialize()
 void Delay::Execute()
 {
 	// Do nothing but delay
+	
+	// For testing purposes:
+	SmartDashboard::PutNumber("Delay Timer", mTimer.Get());
 }
 
 bool Delay::IsFinished()

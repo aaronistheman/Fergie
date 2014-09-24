@@ -7,7 +7,7 @@
 
 class Delay: public Command {
 public:
-	Delay(int delayTime);
+	Delay(double delayTime);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -15,7 +15,7 @@ public:
 	virtual void Interrupted();
 	
 private:
-	int 		mDelayTime;
+	double 		mDelayTime;
 	Timer 		mTimer;
 };
 

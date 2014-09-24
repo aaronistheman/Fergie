@@ -991,7 +991,7 @@ Properties:
     name: Java Package, validators: null, value: org.usfirst.frc0000}
   C++ Windriver Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Windriver\workspace',
     extension: null, folder: true, name: C++ Windriver Workspace, validators: null,
-    value: 'C:\Users\Aaron\Desktop'}
+    value: 'C:\Workspace'}
   Use Default Java Package: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Use Default Java Package, validators: null, value: true}
   Team Number: !!robotbuilder.data.properties.IntegerProperty {default: 0, name: Team Number,

@@ -11,13 +11,25 @@ void _GLOBAL__I__ZN19CatapultForwardSlowC2Ev();
 
 void _GLOBAL__I__ZN11CatapultOffC2Ev();
 
+void _GLOBAL__I__ZN21CatapultPincherToggleC2Ev();
+
 void _GLOBAL__I__ZN19CatapultReverseSlowC2Ev();
+
+void _GLOBAL__I__ZN13CatapultShootC2Ev();
+
+void _GLOBAL__I__ZN19ChassisReverseDriveC2Ev();
 
 void _GLOBAL__I__ZN16ChassisTankDriveC2Ev();
 
-void _GLOBAL__I__ZN9IntakeOffC2Ev();
+void _GLOBAL__I__ZN12HuggerToggleC2Ev();
+
+void _GLOBAL__I__ZN14IntakeMaintainC2Ev();
 
 void _GLOBAL__I__ZN8IntakeOnC2Ev();
+
+void _GLOBAL__I__ZN13IntakeReverseC2Ev();
+
+void _GLOBAL__I__ZN12IntakeToggleC2Ev();
 
 void _GLOBAL__I__ZN19PressurizerCompressC2Ev();
 
@@ -32,6 +44,8 @@ void _GLOBAL__I__ZN8RobotMap14catapultTalon7E();
 void _GLOBAL__I__ZN8CatapultC2Ev();
 
 void _GLOBAL__I__ZN7ChassisC2Ev();
+
+void _GLOBAL__I__ZN6HuggerC2Ev();
 
 void _GLOBAL__I__ZN6IntakeC2Ev();
 
@@ -96,10 +110,16 @@ void (*_ctors[])() =
     {
     _GLOBAL__I__ZN19CatapultForwardSlowC2Ev,
     _GLOBAL__I__ZN11CatapultOffC2Ev,
+    _GLOBAL__I__ZN21CatapultPincherToggleC2Ev,
     _GLOBAL__I__ZN19CatapultReverseSlowC2Ev,
+    _GLOBAL__I__ZN13CatapultShootC2Ev,
+    _GLOBAL__I__ZN19ChassisReverseDriveC2Ev,
     _GLOBAL__I__ZN16ChassisTankDriveC2Ev,
-    _GLOBAL__I__ZN9IntakeOffC2Ev,
+    _GLOBAL__I__ZN12HuggerToggleC2Ev,
+    _GLOBAL__I__ZN14IntakeMaintainC2Ev,
     _GLOBAL__I__ZN8IntakeOnC2Ev,
+    _GLOBAL__I__ZN13IntakeReverseC2Ev,
+    _GLOBAL__I__ZN12IntakeToggleC2Ev,
     _GLOBAL__I__ZN19PressurizerCompressC2Ev,
     _GLOBAL__I__ZN12ShifterShiftC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
@@ -107,6 +127,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN8RobotMap14catapultTalon7E,
     _GLOBAL__I__ZN8CatapultC2Ev,
     _GLOBAL__I__ZN7ChassisC2Ev,
+    _GLOBAL__I__ZN6HuggerC2Ev,
     _GLOBAL__I__ZN6IntakeC2Ev,
     _GLOBAL__I__ZN11PressurizerC2Ev,
     _GLOBAL__I__ZN7ShifterC2Ev,
@@ -143,13 +164,25 @@ void _GLOBAL__D__ZN19CatapultForwardSlowC2Ev();
 
 void _GLOBAL__D__ZN11CatapultOffC2Ev();
 
+void _GLOBAL__D__ZN21CatapultPincherToggleC2Ev();
+
 void _GLOBAL__D__ZN19CatapultReverseSlowC2Ev();
+
+void _GLOBAL__D__ZN13CatapultShootC2Ev();
+
+void _GLOBAL__D__ZN19ChassisReverseDriveC2Ev();
 
 void _GLOBAL__D__ZN16ChassisTankDriveC2Ev();
 
-void _GLOBAL__D__ZN9IntakeOffC2Ev();
+void _GLOBAL__D__ZN12HuggerToggleC2Ev();
+
+void _GLOBAL__D__ZN14IntakeMaintainC2Ev();
 
 void _GLOBAL__D__ZN8IntakeOnC2Ev();
+
+void _GLOBAL__D__ZN13IntakeReverseC2Ev();
+
+void _GLOBAL__D__ZN12IntakeToggleC2Ev();
 
 void _GLOBAL__D__ZN19PressurizerCompressC2Ev();
 
@@ -164,6 +197,8 @@ void _GLOBAL__D__ZN8RobotMap14catapultTalon7E();
 void _GLOBAL__D__ZN8CatapultC2Ev();
 
 void _GLOBAL__D__ZN7ChassisC2Ev();
+
+void _GLOBAL__D__ZN6HuggerC2Ev();
 
 void _GLOBAL__D__ZN6IntakeC2Ev();
 
@@ -218,10 +253,16 @@ void (*_dtors[])() =
     {
     _GLOBAL__D__ZN19CatapultForwardSlowC2Ev,
     _GLOBAL__D__ZN11CatapultOffC2Ev,
+    _GLOBAL__D__ZN21CatapultPincherToggleC2Ev,
     _GLOBAL__D__ZN19CatapultReverseSlowC2Ev,
+    _GLOBAL__D__ZN13CatapultShootC2Ev,
+    _GLOBAL__D__ZN19ChassisReverseDriveC2Ev,
     _GLOBAL__D__ZN16ChassisTankDriveC2Ev,
-    _GLOBAL__D__ZN9IntakeOffC2Ev,
+    _GLOBAL__D__ZN12HuggerToggleC2Ev,
+    _GLOBAL__D__ZN14IntakeMaintainC2Ev,
     _GLOBAL__D__ZN8IntakeOnC2Ev,
+    _GLOBAL__D__ZN13IntakeReverseC2Ev,
+    _GLOBAL__D__ZN12IntakeToggleC2Ev,
     _GLOBAL__D__ZN19PressurizerCompressC2Ev,
     _GLOBAL__D__ZN12ShifterShiftC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
@@ -229,6 +270,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN8RobotMap14catapultTalon7E,
     _GLOBAL__D__ZN8CatapultC2Ev,
     _GLOBAL__D__ZN7ChassisC2Ev,
+    _GLOBAL__D__ZN6HuggerC2Ev,
     _GLOBAL__D__ZN6IntakeC2Ev,
     _GLOBAL__D__ZN11PressurizerC2Ev,
     _GLOBAL__D__ZN7ShifterC2Ev,

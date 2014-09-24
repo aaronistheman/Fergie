@@ -10,3 +10,5 @@
 /Shifter.o
 /UnderGlow.d
 /UnderGlow.o
+*.d
+*.o

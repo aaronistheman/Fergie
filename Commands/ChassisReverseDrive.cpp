@@ -21,6 +21,7 @@ void ChassisReverseDrive::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ChassisReverseDrive::Execute() {
+	// Tell command ChassisTankDrive to do the actual reversing
 	Robot::chassis->mReversed = !(Robot::chassis->mReversed);
 }
 // Make this return true when this Command no longer needs to run execute()

@@ -31,5 +31,5 @@ AutoDelayTest::AutoDelayTest() {
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
 	
-	AddSequential(new Delay(Robot::robotPref->GetDouble("DelayTest", 0.0)));
+	AddSequential(new Delay(Robot::robotPref->GetDouble("delayTest", 0.0)));
 }

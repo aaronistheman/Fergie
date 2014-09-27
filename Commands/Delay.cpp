@@ -17,9 +17,6 @@ void Delay::Initialize()
 void Delay::Execute()
 {
 	// Do nothing but delay
-	
-	// For testing purposes:
-	SmartDashboard::PutNumber("Delay Timer", mTimer.Get());
 }
 
 bool Delay::IsFinished()
@@ -31,10 +28,16 @@ void Delay::End()
 {
 	mTimer.Stop();
 	mTimer.Reset();
+	
+	// For testing purposes:
+	SmartDashboard::PutNumber("Delay Timer", mTimer.Get());
 }
 
 void Delay::Interrupted()
 {
 	mTimer.Stop();
 	mTimer.Reset();
+	
+	// For testing purposes:
+	SmartDashboard::PutNumber("Delay Timer", mTimer.Get());
 }

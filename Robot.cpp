@@ -49,17 +49,17 @@ void Robot::RobotInit() {
 	
 	// Setup the SendableChooser so that the users can select
 	// which autonomous mode to use
-	autoChooser = new SendableChooser();
-	autoChooser->AddDefault("AutoLowGoal", new AutoLowGoal());
-	autoChooser->AddObject("AutoOneBall", new AutoOneBall());
-	autoChooser->AddObject("AutoDoNothing", new AutoDoNothing());
-	autoChooser->AddObject("AutoDelayTest", new AutoDelayTest());
-	SmartDashboard::PutData("AutoChooser", autoChooser);
+	// autoChooser = new SendableChooser();
+	// autoChooser->AddDefault("AutoLowGoal", new AutoLowGoal());
+	// autoChooser->AddObject("AutoOneBall", new AutoOneBall());
+	// autoChooser->AddObject("AutoDoNothing", new AutoDoNothing());
+	// autoChooser->AddObject("AutoDelayTest", new AutoDelayTest());
+	// SmartDashboard::PutData("AutoChooser", autoChooser);
   }
 	
 void Robot::AutonomousInit() {
 	// instantiate the command used for the autonomous period
-	autonomousCommand = (Command*)(autoChooser->GetSelected());
+	// autonomousCommand = (Command*)(autoChooser->GetSelected());
 	
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();

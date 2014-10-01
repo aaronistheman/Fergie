@@ -33,6 +33,12 @@ void IntakeMaintain::Execute() {
 				Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kForward);
 				Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kReverse);
 			}
+			
+			else if (Robot::hugger->huggerDoubleSolenoid->Get() == DoubleSolenoid::kForward)
+			{
+				Robot::intake->intakeDoubleSolenoid->Set(DoubleSolenoid::kForward);
+				Robot::hugger->huggerDoubleSolenoid->Set(DoubleSolenoid::kReverse);
+			}
 		
 			else
 			{

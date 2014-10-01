@@ -11,7 +11,6 @@
 
 
 #include "AutoDelayTest.h"
-#include "Delay.h"
 
 AutoDelayTest::AutoDelayTest() {
 	// Add Commands here:

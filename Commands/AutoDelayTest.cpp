@@ -12,6 +12,7 @@
 
 #include "AutoDelayTest.h"
 #include "Delay.h"
+#include "IntakeOn.h"
 
 AutoDelayTest::AutoDelayTest() {
 	// Add Commands here:
@@ -32,4 +33,5 @@ AutoDelayTest::AutoDelayTest() {
 	// arm.
 	
 	AddSequential(new Delay(Robot::robotPref->GetDouble("delayTest", 0.0)));
+	AddSequential(new IntakeOn());
 }

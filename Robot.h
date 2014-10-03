@@ -29,7 +29,7 @@
 class Robot : public IterativeRobot {
 public:
 	Command *autonomousCommand;
-	// SendableChooser *autoChooser;
+	static SendableChooser *autoChooser;
 	static OI *oi;
 	LiveWindow *lw;
 	static Preferences *robotPref;

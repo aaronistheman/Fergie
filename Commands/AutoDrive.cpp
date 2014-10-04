@@ -27,7 +27,9 @@ void AutoDrive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void AutoDrive::Execute() {
 	// Update driveDistance and goalDistance
-	driveDistance = Robot::chassis->encoder1->Get();
+	// Multiply by -1 because the robot drives backwards during
+	// low goal autonomous mode
+	driveDistance = Robot::chassis->encoder1->Get() * -1;
 	goalDistance = Robot::robotPref->GetDouble("goalDistance", 0.0);
 	
 	// Print to SmartDashboard

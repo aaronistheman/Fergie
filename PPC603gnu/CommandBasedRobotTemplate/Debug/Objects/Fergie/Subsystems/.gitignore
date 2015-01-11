@@ -8,3 +8,8 @@
 /Pressurizer.o
 /Shifter.d
 /Shifter.o
+/UnderGlow.o
+/UnderGlow.d
+/Makefile
+*.o
+*.d

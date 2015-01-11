@@ -117,7 +117,35 @@ CommandBasedRobotTemplate/$(MODE_DIR)/% : LIBPATH =
 CommandBasedRobotTemplate/$(MODE_DIR)/% : LIBS = 
 CommandBasedRobotTemplate/$(MODE_DIR)/% : OBJ_DIR := CommandBasedRobotTemplate/$(MODE_DIR)
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayBeforeIntakeToggle.o : $(PRJ_ROOT_DIR)/Commands/AutoDelayBeforeIntakeToggle.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayTest.o : $(PRJ_ROOT_DIR)/Commands/AutoDelayTest.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDoNothing.o : $(PRJ_ROOT_DIR)/Commands/AutoDoNothing.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDrive.o : $(PRJ_ROOT_DIR)/Commands/AutoDrive.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoIntakeReverse.o : $(PRJ_ROOT_DIR)/Commands/AutoIntakeReverse.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoLowGoal.o : $(PRJ_ROOT_DIR)/Commands/AutoLowGoal.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.o : $(PRJ_ROOT_DIR)/Commands/AutoOneBall.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultAutoShoot.o : $(PRJ_ROOT_DIR)/Commands/CatapultAutoShoot.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -141,11 +169,23 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.o : 
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootAfterDelay.o : $(PRJ_ROOT_DIR)/Commands/CatapultShootAfterDelay.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootSuper.o : $(PRJ_ROOT_DIR)/Commands/CatapultShootSuper.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.o : $(PRJ_ROOT_DIR)/Commands/ChassisReverseDrive.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.o : $(PRJ_ROOT_DIR)/Commands/ChassisTankDrive.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/DelayBeforeShoot.o : $(PRJ_ROOT_DIR)/Commands/DelayBeforeShoot.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -217,14 +257,24 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/TripleMotor.o : $(PRJ_ROOT_
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.o \
+OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayBeforeIntakeToggle.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayTest.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDoNothing.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDrive.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoIntakeReverse.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoLowGoal.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultAutoShoot.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultForwardSlow.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultOff.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultPincherToggle.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultReverseSlow.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootAfterDelay.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootSuper.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/DelayBeforeShoot.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/HuggerToggle.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeMaintain.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeOn.o \
@@ -286,7 +336,35 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/% : LIBPATH =
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/% : LIBS = 
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/% : OBJ_DIR := CommandBassedRobotTemplate_partialImage/$(MODE_DIR)
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayBeforeIntakeToggle.o : $(PRJ_ROOT_DIR)/Commands/AutoDelayBeforeIntakeToggle.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayTest.o : $(PRJ_ROOT_DIR)/Commands/AutoDelayTest.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDoNothing.o : $(PRJ_ROOT_DIR)/Commands/AutoDoNothing.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDrive.o : $(PRJ_ROOT_DIR)/Commands/AutoDrive.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoIntakeReverse.o : $(PRJ_ROOT_DIR)/Commands/AutoIntakeReverse.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoLowGoal.o : $(PRJ_ROOT_DIR)/Commands/AutoLowGoal.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.o : $(PRJ_ROOT_DIR)/Commands/AutoOneBall.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultAutoShoot.o : $(PRJ_ROOT_DIR)/Commands/CatapultAutoShoot.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -310,11 +388,23 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/Cata
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootAfterDelay.o : $(PRJ_ROOT_DIR)/Commands/CatapultShootAfterDelay.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootSuper.o : $(PRJ_ROOT_DIR)/Commands/CatapultShootSuper.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.o : $(PRJ_ROOT_DIR)/Commands/ChassisReverseDrive.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.o : $(PRJ_ROOT_DIR)/Commands/ChassisTankDrive.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/DelayBeforeShoot.o : $(PRJ_ROOT_DIR)/Commands/DelayBeforeShoot.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -386,14 +476,24 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/TripleMotor.o
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.o \
+OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayBeforeIntakeToggle.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayTest.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDoNothing.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDrive.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoIntakeReverse.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoLowGoal.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultAutoShoot.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultForwardSlow.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultOff.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultPincherToggle.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultReverseSlow.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootAfterDelay.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootSuper.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/DelayBeforeShoot.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/HuggerToggle.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeMaintain.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeOn.o \
@@ -424,23 +524,30 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/CommandBassedRobotTemplate_p
 
 force : 
 
-DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultForwardSlow.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultOff.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultPincherToggle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultReverseSlow.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/HuggerToggle.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeMaintain.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeOn.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeReverse.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeToggle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/PressurizerCompress.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ShifterShift.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Robot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/RobotMap.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Catapult.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Chassis.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Hugger.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Intake.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Pressurizer.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Shifter.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/TripleMotor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultForwardSlow.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultOff.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultPincherToggle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultReverseSlow.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/HuggerToggle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeMaintain.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeOn.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeReverse.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeToggle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/PressurizerCompress.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ShifterShift.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/OI.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Robot.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Catapult.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Chassis.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Hugger.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Intake.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Pressurizer.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Shifter.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/TripleMotor.d
+DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayBeforeIntakeToggle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayTest.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDoNothing.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoIntakeReverse.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoLowGoal.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultAutoShoot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultForwardSlow.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultOff.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultPincherToggle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultReverseSlow.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootAfterDelay.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootSuper.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/DelayBeforeShoot.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/HuggerToggle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeMaintain.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeOn.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeReverse.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/IntakeToggle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/PressurizerCompress.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Commands/ShifterShift.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Robot.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Catapult.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Chassis.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Hugger.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Intake.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Pressurizer.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/Subsystems/Shifter.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fergie/TripleMotor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayBeforeIntakeToggle.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDelayTest.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDoNothing.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoDrive.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoIntakeReverse.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoLowGoal.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/AutoOneBall.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultAutoShoot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultForwardSlow.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultOff.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultPincherToggle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultReverseSlow.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShoot.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootAfterDelay.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/CatapultShootSuper.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisReverseDrive.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ChassisTankDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/DelayBeforeShoot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/HuggerToggle.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeMaintain.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeOn.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeReverse.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/IntakeToggle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/PressurizerCompress.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Commands/ShifterShift.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/OI.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Robot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/RobotMap.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Catapult.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Chassis.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Hugger.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Intake.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Pressurizer.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/Subsystems/Shifter.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fergie/TripleMotor.d
 -include $(DEP_FILES)
 
 

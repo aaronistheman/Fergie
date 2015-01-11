@@ -4,3 +4,5 @@
 /.wrproject~
 *.h~
 *.cpp~
+/UnderGlow.o
+/UnderGlow.d

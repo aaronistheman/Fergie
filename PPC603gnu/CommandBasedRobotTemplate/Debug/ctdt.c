@@ -7,6 +7,18 @@
 /*       -fdollars-in-identifiers flag.                   */
 
 
+void _GLOBAL__I__ZN27AutoDelayBeforeIntakeToggleC2Ev();
+
+void _GLOBAL__I__ZN9AutoDriveC2Ev();
+
+void _GLOBAL__I__ZN17AutoIntakeReverseC2Ev();
+
+void _GLOBAL__I__ZN11AutoLowGoalC2Ev();
+
+void _GLOBAL__I__ZN11AutoOneBallC2Ev();
+
+void _GLOBAL__I__ZN17CatapultAutoShootC2Ev();
+
 void _GLOBAL__I__ZN19CatapultForwardSlowC2Ev();
 
 void _GLOBAL__I__ZN11CatapultOffC2Ev();
@@ -17,9 +29,15 @@ void _GLOBAL__I__ZN19CatapultReverseSlowC2Ev();
 
 void _GLOBAL__I__ZN13CatapultShootC2Ev();
 
+void _GLOBAL__I__ZN23CatapultShootAfterDelayC2Ev();
+
+void _GLOBAL__I__ZN18CatapultShootSuperC2Ev();
+
 void _GLOBAL__I__ZN19ChassisReverseDriveC2Ev();
 
 void _GLOBAL__I__ZN16ChassisTankDriveC2Ev();
+
+void _GLOBAL__I__ZN16DelayBeforeShootC2Ev();
 
 void _GLOBAL__I__ZN12HuggerToggleC2Ev();
 
@@ -108,13 +126,22 @@ void _GLOBAL__I__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_ctors[])();
 void (*_ctors[])() =
     {
+    _GLOBAL__I__ZN27AutoDelayBeforeIntakeToggleC2Ev,
+    _GLOBAL__I__ZN9AutoDriveC2Ev,
+    _GLOBAL__I__ZN17AutoIntakeReverseC2Ev,
+    _GLOBAL__I__ZN11AutoLowGoalC2Ev,
+    _GLOBAL__I__ZN11AutoOneBallC2Ev,
+    _GLOBAL__I__ZN17CatapultAutoShootC2Ev,
     _GLOBAL__I__ZN19CatapultForwardSlowC2Ev,
     _GLOBAL__I__ZN11CatapultOffC2Ev,
     _GLOBAL__I__ZN21CatapultPincherToggleC2Ev,
     _GLOBAL__I__ZN19CatapultReverseSlowC2Ev,
     _GLOBAL__I__ZN13CatapultShootC2Ev,
+    _GLOBAL__I__ZN23CatapultShootAfterDelayC2Ev,
+    _GLOBAL__I__ZN18CatapultShootSuperC2Ev,
     _GLOBAL__I__ZN19ChassisReverseDriveC2Ev,
     _GLOBAL__I__ZN16ChassisTankDriveC2Ev,
+    _GLOBAL__I__ZN16DelayBeforeShootC2Ev,
     _GLOBAL__I__ZN12HuggerToggleC2Ev,
     _GLOBAL__I__ZN14IntakeMaintainC2Ev,
     _GLOBAL__I__ZN8IntakeOnC2Ev,
@@ -160,6 +187,18 @@ void (*_ctors[])() =
     0
     };
 
+void _GLOBAL__D__ZN27AutoDelayBeforeIntakeToggleC2Ev();
+
+void _GLOBAL__D__ZN9AutoDriveC2Ev();
+
+void _GLOBAL__D__ZN17AutoIntakeReverseC2Ev();
+
+void _GLOBAL__D__ZN11AutoLowGoalC2Ev();
+
+void _GLOBAL__D__ZN11AutoOneBallC2Ev();
+
+void _GLOBAL__D__ZN17CatapultAutoShootC2Ev();
+
 void _GLOBAL__D__ZN19CatapultForwardSlowC2Ev();
 
 void _GLOBAL__D__ZN11CatapultOffC2Ev();
@@ -170,9 +209,15 @@ void _GLOBAL__D__ZN19CatapultReverseSlowC2Ev();
 
 void _GLOBAL__D__ZN13CatapultShootC2Ev();
 
+void _GLOBAL__D__ZN23CatapultShootAfterDelayC2Ev();
+
+void _GLOBAL__D__ZN18CatapultShootSuperC2Ev();
+
 void _GLOBAL__D__ZN19ChassisReverseDriveC2Ev();
 
 void _GLOBAL__D__ZN16ChassisTankDriveC2Ev();
+
+void _GLOBAL__D__ZN16DelayBeforeShootC2Ev();
 
 void _GLOBAL__D__ZN12HuggerToggleC2Ev();
 
@@ -251,13 +296,22 @@ void _GLOBAL__D__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_dtors[])();
 void (*_dtors[])() =
     {
+    _GLOBAL__D__ZN27AutoDelayBeforeIntakeToggleC2Ev,
+    _GLOBAL__D__ZN9AutoDriveC2Ev,
+    _GLOBAL__D__ZN17AutoIntakeReverseC2Ev,
+    _GLOBAL__D__ZN11AutoLowGoalC2Ev,
+    _GLOBAL__D__ZN11AutoOneBallC2Ev,
+    _GLOBAL__D__ZN17CatapultAutoShootC2Ev,
     _GLOBAL__D__ZN19CatapultForwardSlowC2Ev,
     _GLOBAL__D__ZN11CatapultOffC2Ev,
     _GLOBAL__D__ZN21CatapultPincherToggleC2Ev,
     _GLOBAL__D__ZN19CatapultReverseSlowC2Ev,
     _GLOBAL__D__ZN13CatapultShootC2Ev,
+    _GLOBAL__D__ZN23CatapultShootAfterDelayC2Ev,
+    _GLOBAL__D__ZN18CatapultShootSuperC2Ev,
     _GLOBAL__D__ZN19ChassisReverseDriveC2Ev,
     _GLOBAL__D__ZN16ChassisTankDriveC2Ev,
+    _GLOBAL__D__ZN16DelayBeforeShootC2Ev,
     _GLOBAL__D__ZN12HuggerToggleC2Ev,
     _GLOBAL__D__ZN14IntakeMaintainC2Ev,
     _GLOBAL__D__ZN8IntakeOnC2Ev,
